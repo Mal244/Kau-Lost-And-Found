@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KAU LOST AND FOUND Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KAU Lost and Found - Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .box[id] { scroll-margin-top: 4rem; }
+  </style>
 </head>
-<body>
+<body id="top">
 
   <header>
     <img src="images/logo.png" alt="KAU Lost and Found logo" width="50" height="50" usemap="#logomap">
@@ -26,17 +30,60 @@
 
   <main>
     <h1>Welcome to KAU Lost and Found</h1>
-    <p>This is a website where students can report lost items and find items that others have found.</p>
+    <p>Lost something at KAU? Check where it was last seen, or help a classmate find something you picked up.</p>
+    <p>
+      <a href="#problem">The problem</a> |
+      <a href="#how">How it works</a> |
+      <a href="#benefits">Benefits</a> |
+      <a href="#recent">Recent items</a>
+    </p>
 
-    <section class="box">
-      <h2>placeholder box. change this</h2>
-      <p>placeholder box. change this</p>
+    <article class="box" id="problem">
+      <h2>The problem</h2>
+      <p>If you leave your wallet in the library, you might check the front desk while the student who found it posts in a class chat. A campus-wide list gives you both one place to look.</p>
+    </article>
+
+    <section class="box" id="how">
+      <h2>How it works</h2>
+      <ol>
+        <li><a href="signup.html">Create an account</a> or <a href="login.html">log in</a>.</li>
+        <li>Describe the item and where you lost or found it.</li>
+        <li>Look for a matching report and confirm a detail before arranging a handover.</li>
+      </ol>
+    </section>
+
+    <section class="box" id="benefits">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Reports reach students outside your own class.</li>
+        <li>Locations and dates help you narrow down possible matches.</li>
+        <li>Finders can describe an item without sharing private details from a student ID.</li>
+      </ul>
+    </section>
+
+    <section class="box" id="recent">
+      <h2>Recent items</h2>
+      <table>
+        <caption>Sample found items</caption>
+        <thead>
+          <tr><th scope="col">Item</th><th scope="col">Location</th><th scope="col">Date</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Black wallet</td><td>Library</td><td>12 Nov</td></tr>
+          <tr><td>Student ID card</td><td>Cafeteria</td><td>13 Nov</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-bottom: 0"><a href="#top">Back to top</a></p>
     </section>
   </main>
 
   <footer>
-    <p>KAU Lost and Found</p>
+    <p>KAU Lost and Found - <span id="year">2026</span></p>
   </footer>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
