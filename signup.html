@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KAU Lost and Found Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+  <header>
+    <img src="images/logo.png" alt="KAU Lost and Found logo" width="50" height="50" usemap="#logomap">
+    <map name="logomap">
+      <area shape="rect" coords="0,0,50,50" href="about.html" alt="About Us">
+    </map>
+    <b>KAU Lost and Found</b>
+  </header>
+ 
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+ 
+  <main>
+    <h1>Sign Up</h1>
+    <p>Create an account to get started with KAU Lost and Found.</p>
+    <section class="box">
+      <form onsubmit="return checkPasswords()">
+ 
+        <label for="name">Enter your Full name</label>
+        <input type="text" id="name" name="name" placeholder="Ahmad Hassan Althubaiti" required>
+ 
+        <label for="studentid">Enter your Student ID</label>
+        <input type="text" id="studentid" name="studentid" placeholder="2441244" required>
+ 
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+ 
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+ 
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" name="confirm" minlength="8" required>
+ 
+        <p id="message" style="color: red;"></p>
+ 
+        <button type="submit" class="btn">Create account</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+  </main>
+ 
+  <footer>
+    <p>KAU Lost and Found</p>
+  </footer>
+ 
+  <script src="js/script.js"></script>
+</body>
+</html>
+ 
