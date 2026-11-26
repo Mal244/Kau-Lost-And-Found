@@ -29,4 +29,26 @@ function showItems() {
   }
 }
 
+function addItem() {
+  var nameInput = document.getElementById("itemName");
+  var placeInput = document.getElementById("itemPlace");
+  var dateInput = document.getElementById("itemDate");
+  var message = document.getElementById("addMsg");
+  var name = nameInput.value.trim();
+  var place = placeInput.value.trim();
+  var date = dateInput.value;
+
+  if (name == "" || place == "" || date == "") {
+    message.innerHTML = "Please fill in the item name, location and date.";
+    message.style.color = "red";
+  } else {
+    items.push({name: name, place: place, date: date});
+    showItems();
+    message.innerHTML = "";
+    nameInput.value = "";
+    placeInput.value = "";
+    dateInput.value = "";
+  }
+}
+
 showItems();

@@ -61,6 +61,24 @@
       </ul>
     </section>
 
+    <section class="box" id="report">
+      <h2>Report a found item</h2>
+      <p>Added items stay in this list until you refresh or leave the page.</p>
+      <form onsubmit="addItem(); return false;" novalidate>
+        <label for="itemName">Item name</label>
+        <input type="text" id="itemName" name="itemName" required>
+
+        <label for="itemPlace">Location found</label>
+        <input type="text" id="itemPlace" name="itemPlace" required>
+
+        <label for="itemDate">Date found</label>
+        <input type="date" id="itemDate" name="itemDate" required>
+
+        <p id="addMsg" role="status" aria-live="polite"></p>
+        <button type="submit" class="btn" onclick="addItem(); return false;">Add item</button>
+      </form>
+    </section>
+
     <section class="box" id="recent">
       <h2>Recent items</h2>
       <table>
