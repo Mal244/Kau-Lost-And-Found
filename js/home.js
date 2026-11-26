@@ -51,4 +51,28 @@ function addItem() {
   }
 }
 
+function showGreeting() {
+  var hour = new Date().getHours();
+  var greeting = document.getElementById("greeting");
+
+  if (hour < 12) {
+    greeting.textContent = "Good morning";
+  } else if (hour < 18) {
+    greeting.textContent = "Good afternoon";
+  } else {
+    greeting.textContent = "Good evening";
+  }
+}
+
+function changeLogo() {
+  var logo = document.getElementById("logo");
+
+  if (logo.getAttribute("src") == "images/logo.png") {
+    logo.src = "images/logo2.png";
+  } else {
+    logo.src = "images/logo.png";
+  }
+}
+
 showItems();
+showGreeting();
