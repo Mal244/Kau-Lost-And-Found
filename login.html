@@ -28,11 +28,15 @@
     <h1>Log in</h1>
     <p>Log in to report a lost or found item.</p>
     <section class="box">
-      <form onsubmit="return checkLogin()">
+      <form onsubmit="return checkLogin()" novalidate>
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+        <input type="email" id="email" name="email" placeholder="name@gmail.com" oninput="checkEmail()" required>
+        <span id="emailMsg" style="display: block;"></span>
+
         <label for="password">Password</label>
         <input type="password" id="password" name="password" minlength="8" required>
+        <span id="passwordMsg" style="display: block;"></span>
+
         <p id="message" style="color: red;"></p>
         <button type="submit" class="btn">Login</button>
       </form>
