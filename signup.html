@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,22 +28,27 @@
     <h1>Sign Up</h1>
     <p>Create an account to get started with KAU Lost and Found.</p>
     <section class="box">
-      <form onsubmit="return checkPasswords()">
+      <form onsubmit="return checkPasswords()" novalidate>
  
         <label for="name">Enter your Full name</label>
-        <input type="text" id="name" name="name" placeholder="Ahmad Hassan Althubaiti" required>
+        <input type="text" id="name" name="name" placeholder="Ahmad Hassan Althubaiti" oninput="checkName()" required>
+        <span id="nameMsg" style="display: block;"></span>
  
         <label for="studentid">Enter your Student ID</label>
-        <input type="text" id="studentid" name="studentid" placeholder="2441244" required>
+        <input type="text" id="studentid" name="studentid" placeholder="2441244" oninput="checkStudentId()" required>
+        <span id="studentidMsg" style="display: block;"></span>
  
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+        <input type="email" id="email" name="email" placeholder="name@gmail.com" oninput="checkEmail()" required>
+        <span id="emailMsg" style="display: block;"></span>
  
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" minlength="8" required>
+        <input type="password" id="password" name="password" minlength="8" oninput="checkPass()" required>
+        <span id="passwordMsg" style="display: block;"></span>
  
         <label for="confirm">Confirm password</label>
-        <input type="password" id="confirm" name="confirm" minlength="8" required>
+        <input type="password" id="confirm" name="confirm" minlength="8" oninput="checkConfirm()" required>
+        <span id="confirmMsg" style="display: block;"></span>
  
         <p id="message" style="color: red;"></p>
  
@@ -61,4 +65,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
- 
